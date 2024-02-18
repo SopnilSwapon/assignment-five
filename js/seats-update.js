@@ -43,20 +43,13 @@ for(const seat of seats){
         setValueById('current-total', updateTotal);
         setValueById('grand-total', updateTotal);
              
-   
-        // selectSeat.setAttribute('disabled');
-        // console.log(selectSeat);
-        // selectSeat.setAttribute('disabled', true)
-        // selectSeat.disabled = true;
-        // selectSeat.disabled = true;
-        // console.log(selectSeat);
-        if (selectSeat) {
-            // Disable the button
-            selectSeat.disabled = true;
-        } else {
-            console.log('Button not found or selectSeat is not a valid reference.');
-        }
-        console.log(selectSeat);
+       
+       
+        selectSeat.addEventListener('click', function(){
+            
+        })
+        //---------------- uses seats disabled--------------------//
+        selectSeat.disabled = true; 
 
     }
 };
