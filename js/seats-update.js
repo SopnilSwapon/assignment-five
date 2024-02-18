@@ -2,9 +2,11 @@ const seats = ['A1', 'A2', 'A3', 'A4', 'B1', 'B2', 'B3', 'B4', 'C1', 'C2', 'C3',
 for(const seat of seats){
     const selectSeat = document.getElementById(seat);
     selectSeat.addEventListener('click', setAll);
+    console.log(seat);
     
-    
+
     function setAll(){
+        
         
         //_______________ set remain seats_________________//
         const currentSeats = getElementValueById('remain-seats');
@@ -19,6 +21,7 @@ for(const seat of seats){
         const updateSets = currentSeats - 1;
         setValueById('remain-seats', updateSets);
         selectSeat.classList.add('bg-[#1DD100]');
+        
 
         // _______________________selected seats details___________________//
           const selectedSeatDetailsContainer = document.getElementById('selected-seat-details');
@@ -32,16 +35,28 @@ for(const seat of seats){
         const currentSelectedSeats = getElementValueById('selceted-seat');
         const updaSelectedSeats = currentSelectedSeats + 1;
         setValueById('selceted-seat', updaSelectedSeats);
+        
 
         //______________________set total price____________________//
         const currentTotal = getElementValueById('current-total');
         const updateTotal = currentTotal + 550;
         setValueById('current-total', updateTotal);
-        setValueById('grand-total', updateTotal)
+        setValueById('grand-total', updateTotal);
+             
+   
+        // selectSeat.setAttribute('disabled');
+        // console.log(selectSeat);
+        // selectSeat.setAttribute('disabled', true)
+        // selectSeat.disabled = true;
+        // selectSeat.disabled = true;
+        // console.log(selectSeat);
+        if (selectSeat) {
+            // Disable the button
+            selectSeat.disabled = true;
+        } else {
+            console.log('Button not found or selectSeat is not a valid reference.');
+        }
+        console.log(selectSeat);
 
-        //_____________set grand total price ____________________//
-        // const currentGrandTotal = getElementValueById('grand-total');
-        // const updaTeGrandTotal = currentGrandTotal + updateTotal;
-        // setValueById('grand-total', updaTeGrandTotal);
     }
-}
+};

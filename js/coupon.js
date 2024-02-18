@@ -8,18 +8,59 @@ function updaTeGrandTotalByUseCoupon(){
         return;
     }
     if(couponApplyField === couponNewOfferString){
-        const discoutNewOffer = currentGrandTotal * (15 /100);
+        let discoutNewOffer = currentGrandTotal * (15 /100);
         const newGrandTotal = currentGrandTotal - discoutNewOffer;
-        setValueById('grand-total', newGrandTotal);}
-        else if(couponApplyField === couponCoupleString){
-            const discountCoupleOffer =currentGrandTotal  * (20 /100);
+        setValueById('grand-total', newGrandTotal);
+    
+     // ________________________add NEW15 coupon discount amount_________________
+     function setDiscountCountonHtmlElement(){
+        const discountContainer = document.getElementById('dis-coupon-price');
+        const element = `<p>Total discount:</p><p>${discoutNewOffer}</p>BDT`
+        const div = document.createElement('div');
+        div.classList.add('flex', 'justify-between', 'font-bold');
+        div.innerHTML = element;
+        discountContainer.appendChild(div);
+        //    ---------------hide coupon button & field----------------------//
+        const disabledButton = document.getElementById('disable-btn');
+        const disabledCouponField = document.getElementById('counpon-apply-field');
+            disabledButton.classList.add('hidden');
+            disabledCouponField.classList.add('hidden');
+
+    }
+    setDiscountCountonHtmlElement();
+}
+ else if(couponApplyField === couponCoupleString){
+            let discountCoupleOffer =currentGrandTotal  * (20 /100);
             const updateGrandTotal = currentGrandTotal - discountCoupleOffer;
 
-            setValueById('grand-total', updateGrandTotal)
+            setValueById('grand-total', updateGrandTotal);
+              // ________________________add Couple 20 coupon discount amount_________________
+          function setDiscountCountonHtmlElement(){
+            const discountContainer = document.getElementById('dis-coupon-price');
+            const element = `<p>Total discount:</p><p>BDT ${discountCoupleOffer}</p>`
+            const div = document.createElement('div');
+            div.classList.add('flex', 'justify-between', 'font-bold', 'p-3');
+            div.innerHTML = element;
+            discountContainer.appendChild(div);
+        //    ---------------hide coupon button & field----------------------//
+            const disabledButton = document.getElementById('disable-btn');
+            const disabledCouponField = document.getElementById('counpon-apply-field');
+                disabledButton.classList.add('hidden');
+                disabledCouponField.classList.add('hidden');
+        }
+        setDiscountCountonHtmlElement();
+       
 
         }
         else{
             alert('type right coupon');
             return
         }
-    }
+    }; 
+    
+
+    
+
+
+
+   

@@ -10,3 +10,9 @@ function setValueById(elementId, value){
     const element = document.getElementById(elementId);
     element.innerText = value;
 }
+
+function openTicketSection(){
+    const ticketSection = document.getElementById('ticket-section');
+    ticketSection.classList.remove('hidden');
+    console.log(ticketSection);
+}
