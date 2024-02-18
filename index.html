@@ -87,7 +87,7 @@
                     </div>
                     <img class="bg-[#FFBF0F] h-[220px]" src="./images/cupon-devider.png" alt="">
                     <div class="bg-[#FFBF0F] h-[220px] rounded-r-lg p-6 pt-16">
-                    <h3 class="text-3xl font-extrabold">NEW15</h3>
+                    <h3 id="coupon-new-str" class="text-3xl font-extrabold">NEW15</h3>
                     <p>Coupon Code</p>
                     </div>
                 </div>
@@ -100,7 +100,7 @@
                     </div>
                     <img class="bg-[#F78C9C] h-[220px]" src="./images/cupon-devider.png" alt="">
                     <div class="bg-[#F78C9C] p-6 pt-14 h-[220px] rounded-r-lg">
-                        <h3 class="text-3xl font-extrabold">Couple 20</h3>
+                        <h3 id="coupon-couple" class="text-3xl font-extrabold">Couple 20</h3>
                         <p>Coupon Code</p>
                     </div>
                 </div>
@@ -270,10 +270,14 @@
                             <p>Total Price:</p>
                             <p><span id="current-total">00 </span>BDT.</p>
                         </div>
+                        <!-- discount price by user coupon -->
+                        <div id="dis-coupon-price">
+
+                        </div>
                         <!-- coupon apply  -->
                         <div class="ml-4">
-                            <input class="w-[80%] py-3 px-2 rounded" type="number" placeholder="Have any coupon?get discount">
-                            <button id="disable-btn" class="btn bg-[#1DD100] text-white" disabled>Apply</button>
+                            <input id="counpon-apply-field" class="w-[80%] py-3 px-2 rounded" type="text" placeholder="Have any coupon?get discount">
+                            <button onclick="updaTeGrandTotalByUseCoupon()" id="disable-btn" class="btn bg-[#1DD100] text-white" disabled>Apply</button>
                         </div>
                         <!-- grand total -->
                         <div class="flex justify-between p-5 font-extrabold">

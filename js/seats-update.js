@@ -37,10 +37,11 @@ for(const seat of seats){
         const currentTotal = getElementValueById('current-total');
         const updateTotal = currentTotal + 550;
         setValueById('current-total', updateTotal);
+        setValueById('grand-total', updateTotal)
 
         //_____________set grand total price ____________________//
-        const currentGrandTotal = getElementValueById('grand-total');
-        const updaTeGrandTotal = currentGrandTotal + updateTotal;
-        setValueById('grand-total', updaTeGrandTotal);
+        // const currentGrandTotal = getElementValueById('grand-total');
+        // const updaTeGrandTotal = currentGrandTotal + updateTotal;
+        // setValueById('grand-total', updaTeGrandTotal);
     }
 }
