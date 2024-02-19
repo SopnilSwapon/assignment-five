@@ -14,5 +14,4 @@ function setValueById(elementId, value){
 function openTicketSection(){
     const ticketSection = document.getElementById('ticket-section');
     ticketSection.classList.remove('hidden');
-    console.log(ticketSection);
 }

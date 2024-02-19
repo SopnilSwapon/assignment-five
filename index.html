@@ -65,10 +65,35 @@
                         <p class="mb-5 w-full lg:w-[50%] mx-auto">Hanif is most of the famous bus in bangladesh.We have
                             many specialty that's why we are special in travel.We have AC & Non Ac services.You can
                             choose your own self.Hanif is best travel bus in bangladesh.</p>
-                        <button onclick="openTicketSection()" class="btn bg-[#1DD100] font-semibold text-2xl text-white">Buy Tickets</button>
+                        <button onclick="openTicketSection()" class="absolute btn bg-[#1DD100] font-semibold text-2xl text-white">Buy Tickets</button>
                     </div>
                 </div>
             </div>
+        </section>
+        <!-- register users sold ticket information section -->
+        <section class="relative -top-16 w-[90%] mx-auto flex justify-center gap-4">
+            <button class="rounded-3xl w-70 p-10 gap-4 flex items-center bg-white shadow-lg justify-center">
+                 <img src="./images/people.png" alt="">
+                <div class="">
+                    <h1 class="text-4xl font-extrabold block">500k+</h1>
+                    <p class="block">Registered users</p>
+                </div>
+              </button>
+            <button class="rounded-3xl w-70 p-10 gap-4 flex items-center bg-white shadow-lg justify-center">
+                 <img src="./images/ticket-cupon.png" alt="">
+                <div class="">
+                    <h1 class="text-4xl font-extrabold block">1.7 lacks
+                    </h1>
+                    <p class="block">Tickets sold</p>
+                </div>
+              </button>
+            <button class="rounded-3xl w-70 p-10 gap-4 flex items-center bg-white shadow-lg justify-center">
+                 <img src="./images/stoppage.png" alt="">
+                <div class="">
+                    <h1 class="text-4xl font-extrabold block">80k+</h1>
+                    <p class="block">Rental partners</p>
+                </div>
+              </button>
         </section>
     </header>
 
@@ -129,10 +154,11 @@
                         <p>Coach-009-WEB ! AC_Business</p>
                         </div>
                     </div>
-                    <div class=" p-10">
-                        <a class="btn bg-green-200 text-[24px] text-[#1DD100] font-semibold "><div class="flex gap-2">
+                    <div class=" p-5">
+                        <a class="btn bg-green-200 text-[24px] text-[#1DD100] font-semibold "><div class="flex gap-1">
                             <img
-                                src="./images/seat-green-filled.png " height="14px" width="24px" alt="">  <span id="remain-seats">40 </span>Seats left
+                                src="./images/seat-green-filled.png " height="14px" width="24px" alt="">
+                                <span id="remain-seats">40 </span><span>Seats left</span>
                         </div></a>
                     </div>
                     </div>
@@ -291,19 +317,29 @@
                         <p class="font-bold">Passenger Name:</p>
                         <input class="w-[100%] py-3 px-2 rounded border" type="text" placeholder="type your name">
                         <p class="font-bold">Your Number:</p>
-                        <input id="number-field" class="w-[100%] py-3 px-2 rounded border" type="number" placeholder="type your number">
+                        <input oninput="nextBtnAnableByInputValue ()" id="number-field" class="w-[100%] py-3 px-2 rounded border" type="number" placeholder="type your number">
                         <p class="font-bold">Email ID:</p>
                         <input class="w-[100%] py-3 px-2 rounded border" type="email" placeholder="type your email id">
-                        <button class="w-full" disabled ><a class="btn bg-[#1DD100] text-white font-bold text-2xl mt-2" href="./success.html">NEXT</a></button>
+                        <button id="next-btn" onclick="my_modal_5.showModal()" class="btn w-full bg-[#1DD100] text-white font-bold text-2xl mt-2" disabled>NEXT</button>
                         <div class="flex justify-around">
                             <p class="underline">Terms & condition</p>
                         <p class="underline">Canceled policy</p>
-                        </div>
-                    </div>
-
                  </div>
                </div>
            </section>
+           <!-- Successful message section -->
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <img width="50%" class="mx-auto" src="../images/success.png" alt="">
+    <h3 class="text-green-500 font-bold text-3xl mt-4 text-center">SUCCESS</h3>
+    <p class="text-center">Shortly you will find a confirmation in your email.</p>
+      <form class="">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn w-full mx-auto bg-green-300 text-2xl font-semibold text-white mt-3">continue</button>
+      </form>
+  </div>
+</dialog>
+
         </article>
     </main>
         <!-- footer section -->
