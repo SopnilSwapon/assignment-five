@@ -10,8 +10,8 @@ function setValueById(elementId, value){
     const element = document.getElementById(elementId);
     element.innerText = value;
 }
-
+//___________ added scroller on buy button to go ticket section_______________ //
 function openTicketSection(){
     const ticketSection = document.getElementById('ticket-section');
-    ticketSection.classList.remove('hidden');
+    ticketSection.scrollIntoView({behavior:'smooth'})
 }

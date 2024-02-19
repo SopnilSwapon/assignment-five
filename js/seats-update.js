@@ -6,7 +6,7 @@ for(const seat of seats){
     function setAll(){
         
         
-        //_______________ set remain seats_________________//
+        //_______________set remain seats_________________//
         const currentSeats = getElementValueById('remain-seats');
         if(currentSeats === 37){
             const disabledButton = document.getElementById('disable-btn');
